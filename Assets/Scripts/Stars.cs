@@ -12,7 +12,7 @@ public class Stars : MonoBehaviour
     public GameObject player;
     public TextMeshProUGUI timeElapsedText;
     public TextMeshProUGUI distanceText;
-    public TextMeshProUGUI informationText;
+    public GameObject informationText;
     
     public TextAsset[] constFile;
     public AudioClip[] audioClips;
@@ -82,8 +82,8 @@ public class Stars : MonoBehaviour
                 star.position = new Vector3(float.Parse(values[2]), float.Parse(values[4]), float.Parse(values[3]));
                 star.originalPosition = star.position;
                 star.vx = float.Parse(values[7]) * 1.02269E-6f;
-                star.vy = float.Parse(values[8]) * 1.02269E-6f;
-                star.vz = float.Parse(values[9]) * 1.02269E-6f;
+                star.vy = float.Parse(values[9]) * 1.02269E-6f;
+                star.vz = float.Parse(values[8]) * 1.02269E-6f;
                 star.spectralType = values[10].Trim();
                 star.instance = Instantiate(starPrefab, star.position, Quaternion.LookRotation(star.position)) as GameObject;
                 starList.Add(values[0].Substring(0, values[0].Length - 2), star);

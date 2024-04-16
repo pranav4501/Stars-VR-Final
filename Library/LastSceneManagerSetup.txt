@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/stars_cave2_sim.unity
+- path: Assets/Stars.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
